@@ -1,4 +1,5 @@
 import fp from 'fastify-plugin'
+import swaggerui from '@fastify/swagger-ui'
 
 export default fp<any>(async (fastify) => {
   fastify.register(require('@fastify/swagger'), {
@@ -14,4 +15,5 @@ export default fp<any>(async (fastify) => {
       },
     },
   })
+  fastify.register(swaggerui, {});
 })
