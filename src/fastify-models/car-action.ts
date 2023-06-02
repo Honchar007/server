@@ -1,4 +1,4 @@
-const carActionSchema = {
+export const carActionSchema = {
   type: 'object',
   properties: {
     _id: {
@@ -89,7 +89,7 @@ const carActionSchema = {
   },
 };
 
-const getCarActionByVinSchema = {
+export const getCarActionByVinSchema = {
   params: {
     type: 'object',
     properties: {
@@ -108,9 +108,4 @@ const getCarActionByVinSchema = {
       },
     },
   },
-};
-
-module.exports = {
-  carActionSchema,
-  getCarActionByVinSchema,
 };

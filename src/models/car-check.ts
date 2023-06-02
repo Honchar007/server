@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const CarCheckSchema = mongoose.Schema({
+const CarCheckMonSchema = new mongoose.Schema({
   id: String,
   brand: String,
   model: String,
@@ -17,6 +17,6 @@ const CarCheckSchema = mongoose.Schema({
   },
 });
 
-const CarCheckModel = mongoose.model('carcheck', CarCheckSchema, 'carcheck');
+const CarCheckModel = mongoose.model('carcheck', CarCheckMonSchema, 'carcheck');
 
 module.exports = CarCheckModel;

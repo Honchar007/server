@@ -1,4 +1,4 @@
-const UserSchema = {
+export const UserSchema = {
   type: 'object',
   properties: {
     _id: {
@@ -45,7 +45,7 @@ const UserSchema = {
   },
 };
 
-const createCarSchema = {
+export const createCarSchema = {
   description: 'Create a new car',
   tags: ['Cars'],
   body: {
@@ -136,7 +136,7 @@ const createCarSchema = {
   },
 };
 
-const getAllCarsSchema = {
+export const getAllCarsSchema = {
   description: 'Get all cars',
   tags: ['Cars'],
   response: {
@@ -195,7 +195,7 @@ const getAllCarsSchema = {
   },
 };
 
-const generateTokenSchema = {
+export const generateTokenSchema = {
   description: 'Generate token',
   tags: ['Authentication'],
   params: {
@@ -215,7 +215,7 @@ const generateTokenSchema = {
   },
 };
 
-const UserLoginSchema = {
+export const UserLoginSchema = {
   tags: ['Authentication'],
   body: {
     type: 'object',
@@ -242,7 +242,7 @@ const UserLoginSchema = {
   },
 };
 
-const UserSignupSchema = {
+export const UserSignupSchema = {
   tags: ['Authentication'],
   body: {
     type: 'object',
@@ -274,7 +274,7 @@ const UserSignupSchema = {
   },
 };
 
-const validateTokenSchema = {
+export const validateTokenSchema = {
   description: 'Validate token',
   tags: ['Authentication'],
   security: [{ bearerAuth: [] }],
@@ -289,7 +289,7 @@ const validateTokenSchema = {
   },
 };
 
-const refreshTokenSchema = {
+export const refreshTokenSchema = {
   description: 'Refresh token',
   tags: ['Authentication'],
   security: [{ bearerAuth: [] }],
@@ -317,7 +317,7 @@ const refreshTokenSchema = {
   },
 };
 
-const getUserSchema = {
+export const getUserSchema = {
   params: {
     type: 'object',
     properties: {
@@ -333,16 +333,4 @@ const getUserSchema = {
       },
     },
   },
-};
-
-module.exports = {
-  createCarSchema,
-  getAllCarsSchema,
-  generateTokenSchema,
-  validateTokenSchema,
-  refreshTokenSchema,
-  UserLoginSchema,
-  UserSignupSchema,
-  getUserSchema,
-  UserSchema,
 };

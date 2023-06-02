@@ -7,16 +7,16 @@ const pump = util.promisify(pipeline);
 const mime = require('mime');
 
 // models
-const { getCarActionByVinSchema } = require('./fastify-models/car-action');
+import { getCarActionByVinSchema } from '../fastify-models/car-action';
 
-const {
+import {
   generateTokenSchema,
   validateTokenSchema,
   refreshTokenSchema,
   UserLoginSchema,
   UserSignupSchema,
   getUserSchema,
-} = require('./fastify-models/models');
+} from '../fastify-models/models';
 
 const {
   getCarSchema,
@@ -25,21 +25,21 @@ const {
   updateCarSchema,
   deleteCarSchema,
   getAllOwnerCarsSchema,
-} = require('./fastify-models/car-model');
+} = require('../fastify-models/car-model');
 
 const {
   getAllCarCheckSchema,
   updateCarCheckSchema,
   createCarCheckSchema,
   deleteCarCheckSchema,
-} = require('./fastify-models/car-check-model');
+} = require('../fastify-models/car-check-model');
 
-const CarModel = require('./models/car');
-const CarCheckModel = require('./models/car-check');
-const UserModel = require('./models/user');
-const makeFilters = require('./shared/helpers/makeFilters');
-const BrandModel = require('./models/brand-model');
-const CarActionModel = require('./models/car-action-model');
+const CarModel = require('../models/car');
+const CarCheckModel = require('../models/car-check');
+const UserModel = require('../models/user');
+const makeFilters = require('../shared/helpers/makeFilters');
+const BrandModel = require('../models/brand-model');
+const CarActionModel = require('../models/car-action-model');
 
 import { FastifyPluginAsync, FastifyRequest } from 'fastify'
 

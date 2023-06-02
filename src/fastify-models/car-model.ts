@@ -198,7 +198,7 @@ const deleteCarSchema = {
   },
 };
 
-module.exports = {
+export {
   CarSchema,
   getAllCarsSchema,
   getCarSchema,

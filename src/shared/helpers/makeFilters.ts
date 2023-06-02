@@ -1,4 +1,15 @@
-const makeFilters = (queryParams) => {
+interface Query {
+  brand?: { $regex: string; $options: string };
+  model?: any,
+  $or?: any,
+  fuel?: any,
+  transmission?: any,
+  year?: any,
+  odometr?: any,
+  price?: any,
+}
+
+const makeFilters = (queryParams: { [key: string]: string}) => {
   console.log(queryParams);
   const {
     search,
@@ -13,7 +24,7 @@ const makeFilters = (queryParams) => {
     fuel,
     transmission,
   } = queryParams;
-  const query = {};
+  const query: Query = {};
 
   if (brand) {
     query.brand = { $regex: brand, $options: 'i' };

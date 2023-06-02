@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 // Define the CarAction schema
 const carActionSchema = new mongoose.Schema({

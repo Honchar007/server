@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const CarSchema = mongoose.Schema({
+const CarSchema = new mongoose.Schema({
   id: String,
   ownerId: String,
   carPicsPath: Array,

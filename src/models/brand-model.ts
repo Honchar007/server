@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const BrandModelSchema = mongoose.Schema({
+const BrandModelSchema = new mongoose.Schema({
   id: String,
   brand: String,
   models: Array,
