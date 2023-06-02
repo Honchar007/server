@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const path = require('path')
 const fs = require('fs');
@@ -6,8 +5,6 @@ const util = require('util');
 const { pipeline } = require('stream');
 const pump = util.promisify(pipeline);
 const mime = require('mime');
-const fuelTypes = require('./shared/fuelTypes');
-const transmissionTypes = require('./shared/transmissionTypes');
 
 // models
 const { getCarActionByVinSchema } = require('./fastify-models/car-action');
@@ -18,7 +15,6 @@ const {
   refreshTokenSchema,
   UserLoginSchema,
   UserSignupSchema,
-  UserSchema,
   getUserSchema,
 } = require('./fastify-models/models');
 
@@ -32,9 +28,7 @@ const {
 } = require('./fastify-models/car-model');
 
 const {
-  CarCheckSchema,
   getAllCarCheckSchema,
-  getCarCheckSchema,
   updateCarCheckSchema,
   createCarCheckSchema,
   deleteCarCheckSchema,
